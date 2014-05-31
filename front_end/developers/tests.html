@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en" id="facebook" class="no_js">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Glass Cat - Documentation</title>
+	<link href="dev.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="images/ico.png" />
+	<link rel="stylesheet" href="../js/codemirror-4.0/lib/codemirror.css">
+	<link rel="stylesheet" href="../js/codemirror-4.0/theme/neat.css">
+	<script src="../js/codemirror-4.0/lib/codemirror.js"></script>
+	<script src="../js/codemirror-4.0/mode/oz/oz.js"></script>
+	<script src="../js/jquery-latest.js"></script>
+	<script>
+	function goTo(id) {
+		document.getElementById(id).scrollIntoView();
+	}
+	</script>
+    <script src="../js/glass_cat_dev.js"></script>
+    <script src="../js/anim_dev.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div id="title">Glass Cat
+			<div id="dev">DOC</div>
+			<div id="space"></div>
+			<div id="dev"><a href="doc.html">Home</a></div>
+		</div>
+	</div>
+	<div class="content">
+		<div id="sidebar">				
+			<div id="sidebar_first_elem">
+				<span class="first-child">Boxes</span>
+			</div>
+			<div id="sidebar_elem">
+				<a href="box1.html"></a>			
+				<span class="child">Documentation</span>
+			</div>
+			<div id="sidebar_elem">
+				<a href="tests.html"></a>
+				<span class="child active">Tests</span>
+			</div>
+		</div>
+		<div id="main"> 
+			<div id='main_sub'>
+				<div class="main_box"> 
+					<div class="main_subbox">
+						<h1 id="Title 1">Run tests on Glass Cat</h1>
+						<p><input type="submit" class="button" onclick=exe_fun_complete() value="Run"/></p>	
+					</div>
+				</div>																				
+			</div>
+		</div>
+		<div id="navigation">
+			<ul>
+				<li data-target="Title 1"></li>
+					<a class="nav" onClick="goTo('Title 1');" role="button">Test 1</a>
+				<li data-target="Title 2"></li>
+					<a class="nav" onClick="goTo('Title 2');" role="button">Test 2</a>
+				<li data-target="Title 3"></li>
+					<a class="nav" onClick="goTo('Title 3');" role="button">Test 3</a>	
+				<li data-target="Title 4"></li>
+					<a class="nav" onClick="goTo('Title 4');" role="button">Test 4</a>						
+			</ul>
+		</div>
+	</div>
+<script>window.onpaint = add_it();</script>	
+</body>
+</html>

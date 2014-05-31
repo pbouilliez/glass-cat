@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Glass Cat - Beta</title>
+	<meta name="Oz semantic" content="" />
+	<meta name="Display states and stack for Oz kernel language" content="" />
+	<link rel="icon" type="front_end/users/image/png" href="front_end/users/images/ico.png" />
+	<link href="front_end/users/default.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="front_end/js/codemirror-4.0/lib/codemirror.css">
+	<link rel="stylesheet" href="front_end/js/codemirror-4.0/theme/neat.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<!--script src="http://serve.drawium.com/14121788_2752.js"></script-->
+	<script src="front_end/js/codemirror-4.0/lib/codemirror.js"></script>
+	<script src="front_end/js/codemirror-4.0/mode/oz/oz.js"></script>
+	<script src="front_end/js/jquery-latest.js"></script>
+    <script src="front_end/js/glass_cat-min.js"></script>
+    <script src="front_end/js/anim.js"></script>
+</head>
+<body>
+<div id="header">
+	<div id="title_bar">
+		<div>
+			<div id="logo">
+				<div id="title">Glass Cat</div>
+			</div>
+			<div id='cssmenu'>
+			<ul>
+			   <li class='active'><a href='index.html'><span>Home</span></a></li>
+			   <li class='has-sub'><a href='#'><span>Examples</span></a>
+			      <ul>
+			         <li class='has-sub'><a><span>local</span></a>
+					 <ul>
+						 <li class='first'><a href='example1.html'><span>Example1</span></a></li>
+						 <li class='last'><a href='example2.html'><span>Example2</span></a></li>
+					 </ul>
+					 </li>
+			         <li class='has-sub'><a><span>if</span></a>
+					 <ul>
+						 <li class='first'><a href='example3.html'><span>Example3</span></a></li>
+						 <li><a href='example4.html'><span>Example4</span></a></li>
+						 <li class='last'><a href='example6.html'><span>Example6</span></a></li>
+					 </ul>
+					 </li>
+			         <li class='has-sub'><a><span>if...else</span></a>
+					 <ul>
+						 <li class='first last'><a href='example5.html'><span>Example5</span></a></li>
+					 </ul>
+					 </li>
+			         <li class='has-sub'><a><span>case ... of</span></a>
+					 <ul>
+						 <li class='first'><a href='example7.html'><span>Example7</span></a></li>
+						 <li><a href='example8.html'><span>Example8</span></a></li>
+						 <li class='last'><a href='example9.html'><span>Example9</span></a></li>
+					 </ul>
+					 </li>
+			      </ul>
+			   </li>
+			   <li><a href='about.html'><span>About</span></a></li>
+			   <li class='last'><a href='contact.html'><span>Contact</span></a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="wrapper">
+	<div>
+	<div id="page">
+		<div id="content">
+			<form><textarea id="code"></textarea></form>
+			    <script>
+			      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+			        lineNumbers: true,
+			        extraKeys: {"Ctrl-Space": "autocomplete"},
+			        mode: {name: "oz", globalVars: true},
+					theme : 'neat'
+			      });
+			    </script>
+			<div id="VCR">
+				<input id="pre" type="submit" class="button" value="PREVIOUS" disabled/>
+				<input id="exe" type="submit" class="button first_but" value="EXECUTE"/>
+				<input id="next" type="submit" class="button" value="NEXT" disabled/>
+				<div>
+					<input id="goto" type="submit" class="button_long" value="GO TO step" disabled/>
+				</div>
+			</div>
+		</div>
+		<div class="verticalLine">
+			<p> </p>
+		</div>
+		<br style="clear: both;" />
+		<div id="sidebar">
+			<div id="sidebar_title">State</div>
+			<p id="state"></p>
+			<div id="sidebar_title" class="stack_title">Store</div>
+			<p id="stack"></p>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div id="wrapper2">
+	<div id="footer">Enjoy !</div>
+	<p id="legal"> &copy;2014 P.Bouilliez All Rights Reserved.
+</div>
+<!-- end footer -->
+</body>
+</html>

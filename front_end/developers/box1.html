@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en" id="facebook" class="no_js">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Glass Cat - Documentation</title>
+	<link href="dev.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="images/ico.png" />
+	<link rel="stylesheet" href="../interlude/js/codemirror-4.0/lib/codemirror.css">
+	<link rel="stylesheet" href="../interlude/js/codemirror-4.0/addon/hint/show-hint.css">
+	<link rel="stylesheet" href="../interlude/js/codemirror-4.0/theme/neat.css">
+	<script src="../interlude/js/codemirror-4.0/lib/codemirror.js"></script>
+	<script src="../interlude/js/codemirror-4.0/addon/hint/show-hint.js"></script>
+	<script src="../interlude/js/codemirror-4.0/addon/hint/javascript-hint.js"></script>
+	<script src="../interlude/js/codemirror-4.0/mode/oz/oz.js"></script>
+	<script>
+	function editor(id) {
+	    var editor = CodeMirror.fromTextArea(document.getElementById(id), {
+	        lineNumbers: true,
+	        mode: {name: "oz", globalVars: true},
+			theme : 'neat',
+			readOnly : true,
+	    });
+		var text = document.getElementById(id).value;   
+		var lines = text.split(/\r|\r\n|\n/);
+		var nbr_lines = lines.length;
+		editor.setSize(486, 16*6);
+	}
+	</script>
+	<script>
+	function goTo(id) {
+		document.getElementById(id).scrollIntoView();
+	}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div id="title">Glass Cat
+			<div id="dev">DOC</div>
+			<div id="space"></div>
+			<div id="dev"><a href="doc.html">Home</a></div>
+		</div>
+	</div>
+	<div class="content">
+		<div id="sidebar">				
+			<div id="sidebar_first_elem">
+				<span class="first-child">Boxes</span>
+			</div>
+			<div id="sidebar_elem">
+				<a href="../box1.html"></a>			
+				<span class="child">Box 1</span>
+			</div>
+			<div id="sidebar_elem">
+				<a href="../box2.html"></a>
+				<span class="child">Box 2</span>
+			</div>
+		</div>
+		<div id="main"> 
+			<div>
+				<div class="main_box"> 
+					<div class="main_subbox">
+						<h1 id="Title 1">Title 1</h1>
+						<p>Prout prout caca</p>
+						
+					</div>
+				</div>
+				<div class="main_box"> 
+					<div class="main_subbox">
+						<h2 id="Title 2">Title 2</h2>
+						<p>Prout prout caca</p>
+						<p><form><textarea id="code2">local Y in 
+  Y = 10
+  local X in
+    X = Y+1
+  end
+end</textarea></form><script>editor("code2");</script>
+						</p>
+						<p>bla bla</p>
+					</div>
+				</div>
+				<div class="main_box"> 
+					<div class="main_subbox">
+						<h2 id="Title 2">Title 3</h2>
+						<p>Prout prout caca</p>
+						<p><form><textarea id="code3">local Y in 
+  Y = 10
+  local X in
+    X = Y+1
+  end
+end</textarea></form><script>editor("code3");</script>
+						</p>
+						<p>bla bla</p>
+					</div>
+				</div>
+				<div class="main_box"> 
+					<div class="main_subbox">
+						<h2 id="Title 2">Title 4</h2>
+						<p>Prout prout caca</p>
+						<p><form><textarea id="code4">local Y in 
+  Y = 10
+  local X in
+    X = Y+1
+  end
+end</textarea></form><script>editor("code4");</script>
+						</p>
+						<p>bla bla</p>
+					</div>
+				</div>								
+			</div>
+		</div>
+		<div id="navigation">
+			<ul>
+				<li data-target="Title 1"></li>
+					<a class="nav" onClick="goTo('Title 1');" role="button">First</a>
+				<li data-target="Title 2"></li>
+					<a class="nav" onClick="goTo('Title 2');" role="button">Second</a>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>

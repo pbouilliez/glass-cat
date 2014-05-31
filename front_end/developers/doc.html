@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en" id="facebook" class="no_js">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Glass Cat - Documentation</title>
+	<link href="dev.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="images/ico.png" />
+	<link rel="stylesheet" href="../interlude/js/codemirror-4.0/lib/codemirror.css">
+	<link rel="stylesheet" href="../interlude/js/codemirror-4.0/addon/hint/show-hint.css">
+	<link rel="stylesheet" href="../interlude/js/codemirror-4.0/theme/neat.css">
+	<script src="../interlude/js/codemirror-4.0/lib/codemirror.js"></script>
+	<script src="../interlude/js/codemirror-4.0/addon/hint/show-hint.js"></script>
+	<script src="../interlude/js/codemirror-4.0/addon/hint/javascript-hint.js"></script>
+	<script src="../interlude/js/codemirror-4.0/mode/oz/oz.js"></script>
+	<script>
+	function editor(id) {
+	    var editor = CodeMirror.fromTextArea(document.getElementById(id), {
+	        lineNumbers: true,
+	        mode: {name: "oz", globalVars: true},
+			theme : 'neat',
+			readOnly : true,
+	    });
+		var text = document.getElementById(id).value;   
+		var lines = text.split(/\r|\r\n|\n/);
+		var nbr_lines = lines.length;
+		editor.setSize(486, 16*6);
+	}
+	</script>
+	<script>
+	function goTo(id) {
+		document.getElementById(id).scrollIntoView();
+	}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div id="title">Glass Cat
+			<div id="dev">DOC</div>
+			<div id="space"></div>
+			<div id="dev"><a href="doc.html">Home</a></div>
+		</div>
+	</div>
+	<div class="content">
+		<div id="sidebar">				
+			<div id="sidebar_first_elem">
+				<span class="first-child">Boxes</span>
+			</div>
+			<div id="sidebar_elem">
+				<a href="box1.html">		
+				<span class="child">Documentation</span></a>	
+			</div>
+			<div id="sidebar_elem">
+				<a href="tests.html">
+				<span class="child">Tests</span></a>
+			</div>
+		</div>
+		<div id="main"> 
+			<div>
+				<div class="main_box"> 
+					<div class="main_subbox">
+						<h1 id="Title 1">Welcome !</h1>
+						<h2 id="Title 2">In the documentation of Glass Cat</h2>
+						<p>We can see the documentation to know how to work on Glass Cat.</p>
+						<p>In order to know if Glass Cat works well even with your new rule, you can run some predefined tests and even add your owns</p>
+					</div>
+				</div>
+		<div id="navigation">
+			<ul>
+				<li data-target="Title 1"></li>
+					<a class="nav" onClick="goTo('Title 1');"  role="button">Welcome</a>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>
