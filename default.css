@@ -3,7 +3,12 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background: #7A5CD6;
+	/*background: #7A5CD6;*/
+	background: -webkit-linear-gradient(bottom, #3b5998 , #7A5CD6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(top, #3b5998, #7A5CD6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(top, #3b5998, #7A5CD6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to top, #3b5998 , #7A5CD6); /* Standard syntax */
+	background-size: 10px 1000px;
 	font-size: 15px;
 	font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
 	color: #888888;
@@ -48,7 +53,7 @@ a {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    /*background-color: rgba(0,0,0,0.4);*/
     z-index: 999999999;
 }
 
@@ -100,7 +105,6 @@ a {
 	border:1px solid #E8E8E8;
 	display:inline-block;
 	font-size:15px;
-	font-weight:bold;
 	font-style:normal;
 	height:42px;
 	line-height:39px;
@@ -115,7 +119,7 @@ a {
 	margin-top: 21px;
 	cursor: pointer;
 }.but:hover {
-	background-color:#7c7c7c;
+	background-color:#989898 ;
 	color: #fff !important;
 }.but:active {
 	position:relative;
