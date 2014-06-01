@@ -224,6 +224,11 @@ div {
 	position: fixed;
 	margin-left: 625px;
 	top: 56px;
+	line-height:21px;
+}
+
+.sb_t {
+	margin-left: 846px !important;
 }
 
 ul {
