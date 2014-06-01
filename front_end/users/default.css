@@ -90,7 +90,7 @@ hr {
   float: right;
   position: absolute;
   margin-top: 88px;
-  right:100px;
+  right: 89px;
   z-index: 9999;
   width: auto;
   padding: 0;
@@ -940,7 +940,6 @@ polygon[Attributes Style] {
 	margin-bottom: 0px;
 	bottom: 0px;
 	width: 100%;
-	min-width:1200px;
 	z-index: 0;
 }
 
