@@ -37,7 +37,6 @@ This sub-folder contains:
 
 1. Open 'js/glass_cat.js' and add the following lines at the end of `generate_semantics` (below `cnt_exe++;`):
 ```
-#!javascript
 	}
 	a = state.split("</p>").join("\\n");
 	a = a.split("<p>").join("");
