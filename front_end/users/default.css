@@ -90,7 +90,7 @@ hr {
   float: right;
   position: absolute;
   margin-top: 88px;
-  right: 89px;
+  right:100px;
   z-index: 9999;
   width: auto;
   padding: 0;
@@ -390,7 +390,7 @@ hr {
 	margin: 15px 70px;
 	display: inline-block;
 	width: 90%;
-	height: 590px;
+	height: 550px;
 }
 
 #wrapper_small {
@@ -836,6 +836,36 @@ polygon[Attributes Style] {
 	fill: #e93f34;
 }
 
+#gc {
+    width: 34px;
+    height: 42px;
+	position: absolute;
+	top: 170px;
+	right: 98px;
+}
+
+#gc:hover {
+	cursor: pointer;
+}
+#gc:active {
+	top: 172px;
+}
+
+#do {
+    width: 25px;
+    height: 42px;
+	position: absolute;
+	top: 230px;
+	right: 102px;
+}
+
+#do:hover {
+	cursor: pointer;
+}
+#do:active {
+	top: 232px;
+}
+
 /* Main */
 
 .small {
@@ -940,6 +970,7 @@ polygon[Attributes Style] {
 	margin-bottom: 0px;
 	bottom: 0px;
 	width: 100%;
+	min-width:1200px;
 	z-index: 0;
 }
 
