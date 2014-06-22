@@ -841,7 +841,7 @@ polygon[Attributes Style] {
     height: 42px;
 	position: absolute;
 	top: 170px;
-	right: 98px;
+	left: 1188px;
 }
 
 #gc:hover {
@@ -856,7 +856,7 @@ polygon[Attributes Style] {
     height: 42px;
 	position: absolute;
 	top: 230px;
-	left: 1181px;
+	left: 1194px;
 }
 
 #do:hover {
