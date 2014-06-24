@@ -240,5 +240,15 @@ document.getElementById('goto').onclick = function () {
 	$("body").append('<div class="overlay"></div><div class="modal"><div class="top"><div class="vertical_align">Where do you want to go?</div></div><div class="mid"><div class="center">'+browse_go()+'</div></div><button type="button" class="but" onclick="remove_overlay()">Done</button></div>');
 };
 
+document.getElementById('gc').onclick = function () {
+	console.debug(cnt_browse);
+	gc_pressed = new Array();
+	for(var i=0;i<GC.length; i++) {
+		if(GC[i][0]>=cnt_browse) {
+			gc_pressed.push(GC[i][1]);
+		}
+	}
+};
+
 });
  
